@@ -455,7 +455,131 @@
         grid-template-columns: 1fr;
     }
 
+    .about-badges {
+        gap: 0.8rem;
+    }
+
+    .about-badge {
+        flex: 1 1 calc(50% - 0.8rem);
+        min-width: 130px;
+    }
+
+    .audience-card {
+        padding: 1.8rem;
+    }
+
+    .about-cta {
+        padding: 3.5rem 0;
+    }
+
     .about-cta h2 {
         font-size: 1.6rem;
+    }
+
+    .about-cta p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        padding: 3rem 0 2.5rem;
+    }
+
+    .about-hero .container,
+    .modules-section .container,
+    .diff-section .container,
+    .audience-section .container {
+        padding: 0 1rem;
+    }
+
+    .about-eyebrow {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.8rem;
+    }
+
+    .about-hero-text h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .about-hero-text p {
+        font-size: 1rem;
+    }
+
+    .about-badge {
+        flex: 1 1 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    .about-hero-shot-caption {
+        font-size: 0.8rem;
+        padding: 1.2rem 1rem 0.7rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .section-heading p {
+        font-size: 0.95rem;
+    }
+
+    .module-row {
+        gap: 1.5rem;
+    }
+
+    .module-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .module-text p,
+    .module-list li {
+        font-size: 0.92rem;
+    }
+
+    .modules-section .container {
+        gap: 3.5rem;
+    }
+
+    .diff-card {
+        padding: 1.4rem;
+    }
+
+    .audience-card {
+        padding: 1.5rem;
+    }
+
+    .audience-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .audience-card p {
+        font-size: 0.92rem;
+    }
+
+    .about-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-cta-actions .btn-cadastro,
+    .about-cta-actions .btn-portal {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-hero-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .about-badges {
+        flex-direction: column;
+    }
+
+    .about-badge {
+        min-width: 0;
     }
 }
