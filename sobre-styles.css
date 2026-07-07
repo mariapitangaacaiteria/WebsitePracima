@@ -247,6 +247,62 @@
     box-shadow: 0 10px 26px rgba(106, 27, 106, 0.2);
 }
 
+/* ============ Carrossel de imagens ============ */
+.module-carousel {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid var(--border-color);
+    box-shadow: 0 15px 40px rgba(106, 27, 106, 0.25);
+    background: #0f0f1a;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.carousel-dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-dot.active {
+    width: 24px;
+    background: var(--light-text);
+}
+
 /* ============ Diferenciais técnicos ============ */
 .diff-section {
     padding: 6rem 0;

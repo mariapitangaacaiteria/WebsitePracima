@@ -149,12 +149,18 @@
 
             <!-- BSC -->
             <div class="module-row reverse">
-                <div class="module-gallery">
-                    <div class="module-image">
-                        <img src="assets/sistema3.png" alt="Painel do Balanced Scorecard com as 4 perspectivas">
+                <div class="module-carousel" data-interval="5000">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="assets/sistema3.png" alt="Painel do Balanced Scorecard com as 4 perspectivas">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/sistema2.png" alt="Indicadores da dimensão Sustentabilidade no BSC">
+                        </div>
                     </div>
-                    <div class="module-image">
-                        <img src="assets/sistema2.png" alt="Indicadores da dimensão Sustentabilidade no BSC">
+                    <div class="carousel-dots">
+                        <button type="button" class="carousel-dot active" aria-label="Ver slide 1"></button>
+                        <button type="button" class="carousel-dot" aria-label="Ver slide 2"></button>
                     </div>
                 </div>
                 <div class="module-text">
@@ -175,15 +181,22 @@
 
             <!-- Relatórios -->
             <div class="module-row">
-                <div class="module-gallery stack-three">
-                    <div class="module-image">
-                        <img src="assets/sistema4.png" alt="Gráfico de tarefas realizadas por período nos relatórios">
+                <div class="module-carousel" data-interval="5000">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="assets/sistema4.png" alt="Gráfico de tarefas realizadas por período nos relatórios">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/sistema5.png" alt="Gráfico de desempenho individual e listas de atividades">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/sistema6.png" alt="Distribuição de tarefas por dimensão BSC nos relatórios">
+                        </div>
                     </div>
-                    <div class="module-image">
-                        <img src="assets/sistema5.png" alt="Gráfico de desempenho individual e listas de atividades">
-                    </div>
-                    <div class="module-image">
-                        <img src="assets/sistema6.png" alt="Distribuição de tarefas por dimensão BSC nos relatórios">
+                    <div class="carousel-dots">
+                        <button type="button" class="carousel-dot active" aria-label="Ver slide 1"></button>
+                        <button type="button" class="carousel-dot" aria-label="Ver slide 2"></button>
+                        <button type="button" class="carousel-dot" aria-label="Ver slide 3"></button>
                     </div>
                 </div>
                 <div class="module-text">
@@ -372,5 +385,42 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.module-carousel').forEach(function (carousel) {
+            var track = carousel.querySelector('.carousel-track');
+            var slides = carousel.querySelectorAll('.carousel-slide');
+            var dots = carousel.querySelectorAll('.carousel-dot');
+            if (slides.length <= 1) return;
+
+            var index = 0;
+            var interval = parseInt(carousel.dataset.interval, 10) || 5000;
+            var timer;
+
+            function goTo(i) {
+                index = (i + slides.length) % slides.length;
+                track.style.transform = 'translateX(-' + (index * 100) + '%)';
+                dots.forEach(function (dot, di) {
+                    dot.classList.toggle('active', di === index);
+                });
+            }
+
+            function startTimer() {
+                timer = setInterval(function () {
+                    goTo(index + 1);
+                }, interval);
+            }
+
+            dots.forEach(function (dot, i) {
+                dot.addEventListener('click', function () {
+                    clearInterval(timer);
+                    goTo(i);
+                    startTimer();
+                });
+            });
+
+            startTimer();
+        });
+    </script>
 </body>
 </html>
