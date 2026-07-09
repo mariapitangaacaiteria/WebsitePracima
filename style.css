@@ -57,7 +57,7 @@ body {
 }
 
 .logo img {
-    height: 64px;
+    height: 92px;
     width: auto;
     border-radius: 50%;
 }
@@ -549,7 +549,7 @@ body {
     }
 
     .logo img {
-        height: 50px;
+        height: 70px;
     }
 
     .logo span {
@@ -599,7 +599,7 @@ body {
     }
 
     .logo img {
-        height: 45px;
+        height: 64px;
     }
 
     .navbar {
@@ -711,7 +711,7 @@ body {
     }
 
     .logo img {
-        height: 40px;
+        height: 56px;
     }
 
     .navbar {
@@ -823,7 +823,7 @@ body {
     }
 
     .logo img {
-        height: 35px;
+        height: 50px;
     }
 
     .navbar {
@@ -1362,7 +1362,7 @@ body {
     }
 
     .logo img {
-        height: 40px;
+        height: 56px;
     }
 
     .navbar {
@@ -1474,7 +1474,7 @@ body {
     }
 
     .logo img {
-        height: 35px;
+        height: 50px;
     }
 
     .navbar {
@@ -1979,7 +1979,7 @@ body {
 }
 
 .footer-col-brand .footer-brand img {
-    height: 42px;
+    height: 60px;
     width: auto;
     border-radius: 50%;
 }
