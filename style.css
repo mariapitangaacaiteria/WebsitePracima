@@ -112,10 +112,14 @@ body {
 
 .btn-cadastro,
 .btn-portal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     cursor: pointer;
     font-weight: 700;
     border-radius: 999px;
+    text-decoration: none;
     transition: all 0.25s ease;
 }
 
