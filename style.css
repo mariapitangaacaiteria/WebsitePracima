@@ -1999,6 +1999,7 @@ body {
     color: var(--dark-text);
     font-size: 1.2rem;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .footer-col-brand .footer-brand img {
